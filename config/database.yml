@@ -11,3 +11,7 @@ default: &default
 development:
   <<: *default
   database: todo_sinatra
+
+production:
+  <<: *default
+  database: todo_sinatra
