@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  database: todo_sinatra
+  username: postgres
+  password: balu1335
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: todo_sinatra
