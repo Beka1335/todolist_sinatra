@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     end
   end
 
-  get "/login" do 
+  get "/login" do
     if logged_in?
      redirect "/tasks"
     else
@@ -25,13 +25,13 @@ class UsersController < ApplicationController
     end
   end
 
-  post "/login" do 
+  post "/login" do
     @user = User.find_by(:name => params[:name])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect "/tasks"
     else
-      redirect "/login "
+      redirect "/login"
     end
   end
 
